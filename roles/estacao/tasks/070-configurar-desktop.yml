@@ -1,0 +1,19 @@
+---
+  - name: Criar arquivo de configurações
+    copy:
+      content: ""
+      dest: /etc/xdg/kdeglobals
+      force: false
+      owner: root
+      mode: 0555
+    tags: desktop
+
+  - name: Adicionar as configurações
+    ansible.builtin.copy:
+      content: |
+        [KDE Action Restrictions]
+        shell_access=false
+        run_command=false
+        lineedit_text_completion=false
+    tags: desktop
+

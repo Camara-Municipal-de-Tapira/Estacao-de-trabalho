@@ -6,4 +6,5 @@
 - import_tasks: 040-configurar-ssh.yml
 - import_tasks: 050-configurar-firefox.yml
 - import_tasks: 060-configurar-chrome.yml
+- import_tasks: 070-configurar-desktop.yml
 
