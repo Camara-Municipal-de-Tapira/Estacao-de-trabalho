@@ -1,0 +1,17 @@
+{
+    "policies": {
+        "Bookmarks": [
+            {% for bm in firefox_bookmarks %}
+            { "Title": "{{ bm.name }}", "URL": "{{ bm.url }}" }{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        ],
+        "Extensions": {
+            "Install": [
+                {% for ext in firefox_extensions %}
+                "https://addons.mozilla.org/firefox/downloads/latest/{{ ext }}/addon-{{ ext }}.xpi"{% if not loop.last %},{% endif %}
+                {% endfor %}
+            ],
+            "Locked": true
+        }
+    }
+}

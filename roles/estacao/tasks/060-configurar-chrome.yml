@@ -1,0 +1,14 @@
+---
+- name: Criar diretório de policies do Chrome
+  file:
+    path: /etc/opt/chrome/policies/managed
+    state: directory
+    mode: '0755'
+  tags: chrome
+
+- name: Aplicar configuração do Chrome
+  template:
+    src: chrome-policies.json.j2
+    dest: /etc/opt/chrome/policies/managed/default.json
+    mode: '0644'
+  tags: chrome

@@ -1,0 +1,11 @@
+  become: yes
+  tasks:
+    - name: Atualizar o cache do APT
+      ansible.builtin.apt:
+        update_cache: yes
+      tags: upgrade
+
+    - name: Atualizar todos os pacotes para a última versão
+      ansible.builtin.apt:
+        upgrade: dist #dist-upgrade
+      tags: upgrade

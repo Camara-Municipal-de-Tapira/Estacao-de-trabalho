@@ -1,0 +1,14 @@
+---
+- name: Criar diretório de policies do Firefox
+  file:
+    path: /etc/firefox/policies
+    state: directory
+    mode: '0755'
+  tags: firefox
+
+- name: Aplicar configuração do Firefox
+  template:
+    src: firefox-policies.json.j2
+    dest: /etc/firefox/policies/policies.json
+    mode: '0644'
+  tags: firefox

@@ -1,0 +1,23 @@
+---
+- name: UFW - permitir SSH
+  community.general.ufw:
+    rule: allow
+    name: OpenSSH
+  become: true
+
+- name: UFW - permitir HTTP
+  community.general.ufw:
+    rule: allow
+    port: "443"
+    proto: tcp
+  become: true
+
+- name: UFW - Habilitar
+  community.general.ufw:
+    state: enabled
+    default: deny
+  become: true
+
+- name: UFW - reiniciar
+  ansible.builtin.command: ufw reload
+  become: true

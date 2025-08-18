@@ -1,0 +1,6 @@
+all:
+  children:
+    recepcao:
+      hosts:
+        Gabinete:
+    
