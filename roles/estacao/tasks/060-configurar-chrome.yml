@@ -7,8 +7,20 @@
   tags: chrome
 
 - name: Aplicar configuração do Chrome
-  template:
-    src: chrome-policies.json.j2
+  copy:
     dest: /etc/opt/chrome/policies/managed/default.json
-    mode: '0644'
+    content: |
+      {
+        "ManagedBookmarks": [
+          { "toplevel_name:" "Câmara Municipal de Tapira" },
+        { "name": "Site Oficial", "url": "https://www.tapira.mg.leg.br"},
+        { "name": "SAPL", "url": "https://www.sapl.tapira.mg.leg.br"},
+        { "name": "Portal da Transparência", "url": "https://transparencia.tapira.mg.leg.br/#/transparencia"},
+        { "name": "Portal Gov.br", "url": "https://www.gov.br"},
+        { "name": "Diário Oficial", "url": "https://www.in.gov.br"}
+         ],
+         "ExtensionInstallForceList": [
+             "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx"
+          ]
+      }
   tags: chrome
