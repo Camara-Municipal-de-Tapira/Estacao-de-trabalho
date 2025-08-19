@@ -22,21 +22,27 @@ Dependencies
 
 A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-Example Playbook
+Exemplo de playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Nesse comando, deve-se usar os parâmetros corretos na hora de chamar o Playbook. Deve-se tomar cuidado caso o usuário do seu computador seja diferente do usuário que está cadastrado como usuário do suporte. 
+Lembre-se de usar --ask-become e digitar a senha do usuário do suporte, pois o Debian precisa de permissão de sudo para poder executar os comandos.
 
-    - hosts: servers
+O playbook pode ser chamado com: 
+    
+    ansible-playbook -i inventory.yml playbook.yml -u usuariosuporte --ask-become
+
+    - hosts: all
+      become: yes
       roles:
-         - { role: username.rolename, x: 42 }
+        - estacao
 
-License
+Licença
 -------
 
 BSD
 
-Author Information
+Autoria
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Setor de tecnologia da informação da Câmara Municipal de Tapira.
