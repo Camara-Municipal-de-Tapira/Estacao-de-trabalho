@@ -1,0 +1,30 @@
+---
+- name: Configura o Plymouth com tema
+  tasks:
+
+    - name: Altera o GRUB para adicionar splash
+      ansible.builtin.lineinfile:
+        path: /etc/default/grub
+        line: "{{ item.line }}"
+        regexp: "{{ item.regexp }}"
+      loop:
+        - regexp: '^GRUB_CMDLINE_LINUX_DEFAULT='
+          line: '^GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"'
+        - regexp: 'GRUB_GFXMODE='
+          line: 'GRUB_GFXMODE=1368X768'
+        - regexp: 'GRUB_TIMEOUT=5'
+          line: 'GRUB_TIMEOUT=0'
+      backup: yes
+
+    - name: Atualiza o GRUB
+      ansible.builtin.command: update-grub2
+      changed_when: true
+      listen: "update grub config"
+
+    - name: Configura o tema do Plymouth
+      ansible.builtin.command: plymouth-set-default-theme -R ceratopsian
+    
+    - name: Aplica as mudanças
+      ansible.builtin.command: update-grub2
+
+
