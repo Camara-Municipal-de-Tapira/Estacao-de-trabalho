@@ -7,6 +7,7 @@
         dest: /etc/systemd/logind.conf.old
         remote_src: yes
         force: no
+      tags: tty
 
     - name: Desativa os TTYS
       lineinfile:
@@ -28,3 +29,4 @@
       systemd:
         name: systemd-logind
         state: restarted  
+      tags: tty
