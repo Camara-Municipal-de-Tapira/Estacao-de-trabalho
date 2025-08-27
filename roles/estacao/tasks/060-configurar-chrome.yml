@@ -1,26 +1,16 @@
 ---
-- name: Criar diretório de policies do Chrome
+- name: Criar diretório para o token do Google Workspace
   file:
-    path: /etc/opt/chrome/policies/managed
+    path: /etc/opt/chrome/policies/enrollment
     state: directory
     mode: '0755'
   tags: chrome
 
+#Deve-se aplicar essas políticas diretamente no admin do Google #Workspace e lá pegar o token para gerenciar o Chrome
+
 - name: Aplicar configuração do Chrome
   copy:
-    dest: /etc/opt/chrome/policies/managed/default.json
+    dest: /etc/opt/chrome/policies/managed/enrollment/CloudManagementEnrollmentToken
     content: |
-      {
-        "ManagedBookmarks": [
-          { "toplevel_name:" "Câmara Municipal de Tapira" },
-        { "name": "Site Oficial", "url": "https://www.tapira.mg.leg.br"},
-        { "name": "SAPL", "url": "https://www.sapl.tapira.mg.leg.br"},
-        { "name": "Portal da Transparência", "url": "https://transparencia.tapira.mg.leg.br/#/transparencia"},
-        { "name": "Portal Gov.br", "url": "https://www.gov.br"},
-        { "name": "Diário Oficial", "url": "https://www.in.gov.br"}
-         ],
-         "ExtensionInstallForceList": [
-             "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx"
-          ]
-      }
+      b497296b-35a1-44cc-8829-0ae213e2512c
   tags: chrome

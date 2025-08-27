@@ -29,9 +29,11 @@
           ansible.builtin.apt:
             deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
             state: present
+          tags: instalar
 
         - name: "Instala o RustDesk"
           ansible.builtin.apt:
             deb: https://github.com/rustdesk/rustdesk/releases/download/1.4.1/rustdesk-1.4.1-x86_64.deb
             state: present
+          tags: instalar
 
