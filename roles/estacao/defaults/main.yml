@@ -17,17 +17,3 @@ firefox_extensions:
     - "uBlock0@raymondhill.net"
     - "jid1-ZAdIEUB7XOzOJw@jetpack"
 
-chrome_bookmarks:
-    - name: "Câmara Municipal de Tapira"
-      url: "https://www.tapira.mg.leg.br"
-    - name: "SAPL"
-      url: "https://www.sapl.tapira.mg.leg.br"
-    - name: "Portal da transparência"
-      url: "https://transparencia.tapira.mg.leg.br/#/transparencia"
-    - name: "Portal Gov.br"
-      url: "https://www.gov.br"
-    - name: "Diário Oficial"
-      url: "https://www.in.gov.br"
-
-chrome_extensions:
-    - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
