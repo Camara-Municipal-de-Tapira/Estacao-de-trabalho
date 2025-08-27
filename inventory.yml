@@ -2,5 +2,8 @@ all:
   children:
     recepcao:
       hosts:
-        Gabinete:
+        gabinete:
+    presidente:
+      hosts:
+        presidencia:
     

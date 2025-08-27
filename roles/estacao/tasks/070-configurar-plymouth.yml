@@ -6,7 +6,7 @@
         regexp: "{{ item.regexp }}"
       loop:
         - regexp: '^GRUB_CMDLINE_LINUX_DEFAULT='
-          line: '^GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"'
+          line: 'GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"'
         - regexp: 'GRUB_GFXMODE='
           line: 'GRUB_GFXMODE=1368X768'
         - regexp: 'GRUB_TIMEOUT=5'
