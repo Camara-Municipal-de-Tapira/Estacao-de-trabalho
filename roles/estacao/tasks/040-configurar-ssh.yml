@@ -1,17 +1,13 @@
 ---
-- name: Desabilitar login como root
+- name: Configura SSH
   lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^#?PermitRootLogin'
-    line: 'PermitRootLogin no'
-
-- name: Desabilitar autenticação por senha (somente chave SSH)
-  lineinfile:
-    path: /etc/ssh/sshd_config
-    regexp: '^#?PasswordAuthentication'
-    line: 'PasswordAuthentication no'
-
-- name: Reiniciar serviço SSH
-  service:
-    name: ssh
-    state: restarted
+    path: "{{ estacao_sshd }}"
+    regexp: "^{{ item.name }}"
+    line: "{{ item.name }} {{ item.value }}"
+  notify: Restart SSH
+  loop:
+    # Desabilita autenticação por senha
+    - { name: "PasswordAuthentication", value: "no" }
+    # Desabilita login como root
+-   - { name: "PermitRootLogin", value: "no" }
+  tags: ssh  
