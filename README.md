@@ -20,11 +20,11 @@ Ansible e pipx. Instale o pipx com
     
 e depois instale o Ansible com as dependências completas com 
 
-    $ pipx install --include-deps ansible.
+    $ pipx install --include-deps ansible
     
 Para acessar os computadores, é preciso instalar o sshpass: 
 
-    $ sudo apt install sshpass.
+    $ sudo apt install sshpass
 
 Adicione o nome ou endereço IP do computador que será configurado no inventário. Favor seguir o modelo no inventário, ou seja, definir o setor antes de definir o nome da máquina.
 
