@@ -1,0 +1,10 @@
+---
+- name: Configura o modo kiosk de forma a travar algumas configurações
+  copy:
+    dest: "/etc/xdg/kdeglobals"
+    content: |
+      /[KDE Action Restrictions/]/[$i/]
+      shell_access=false
+      run_command=false
+      movable_toolbars=false
+  tags: kde

@@ -7,4 +7,4 @@
 - import_tasks: 050-configurar-firefox.yml
 - import_tasks: 060-configurar-chrome.yml
 - import_tasks: 070-configurar-plymouth.yml
-
+- import_tasks: 080-configurar-kde.yml
