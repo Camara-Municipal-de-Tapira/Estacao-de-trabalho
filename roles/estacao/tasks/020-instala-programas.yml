@@ -3,6 +3,7 @@
           ansible.builtin.apt:
             name:
               - krfb
+              - printer-driver-escpr
               - openssh-server
               - deja-dup
               - vlc
