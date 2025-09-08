@@ -1,5 +1,10 @@
 {
     "policies": {
+	"preferences":{
+		"widget.use-xdg-desktop-portal.file-picker":{
+			"Value": 1
+		}
+	}
         "Bookmarks": [
             {% for bm in firefox_bookmarks %}
             { "Title": "{{ bm.name }}", "URL": "{{ bm.url }}" }{% if not loop.last %}, {% endif %}
