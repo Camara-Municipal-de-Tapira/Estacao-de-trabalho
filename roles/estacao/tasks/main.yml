@@ -1,6 +1,7 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # tasks file for estacao
+- import_tasks: 010-atualizar-pacotes.yml
 - import_tasks: 020-instala-programas.yml
 - import_tasks: 030-ufw.yml
 - import_tasks: 040-configurar-ssh.yml

@@ -10,7 +10,7 @@
 
 - name: Aplicar configuração do Chrome
   copy:
-    dest: /etc/opt/chrome/policies/managed/enrollment/CloudManagementEnrollmentToken
+    dest: /etc/opt/chrome/policies/enrollment/CloudManagementEnrollmentToken
     content: |
       b497296b-35a1-44cc-8829-0ae213e2512c
   tags: chrome

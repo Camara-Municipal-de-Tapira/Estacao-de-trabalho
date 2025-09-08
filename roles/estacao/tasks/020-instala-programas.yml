@@ -1,10 +1,4 @@
 ---
-        - name: "Atualizar cache do APT"
-          ansible.builtin.apt:
-            update_cache: true
-            state: latest
-          tags: atualizar
-
         - name: "Instala programas"
           ansible.builtin.apt:
             name:
