@@ -6,4 +6,7 @@ all:
     presidente:
       hosts:
         presidencia:
+    juridico:
+      hosts:
+        cmtapira-inspiron-3647:
     
