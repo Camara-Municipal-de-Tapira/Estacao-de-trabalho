@@ -17,6 +17,8 @@
               - pdfsam
               - plymouth
               - plymouth-themes
+              - thunderbird
+              - thunderbird-l10n-pt-br
             state: present
           tags: instalar
 
