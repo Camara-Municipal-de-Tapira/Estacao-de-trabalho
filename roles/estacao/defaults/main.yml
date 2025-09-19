@@ -12,6 +12,14 @@ firefox_bookmarks:
       url: "https://www.gov.br"
     - name: "Diário Oficial"
       url: "https://www.in.gov.br"
+    - name: "E-mail"
+      url: "https://www.gmail.com"
+    - name: "Suporte da Câmara"
+      url: "https://cmtapira.on.spiceworks.com/portal"
+    - name: "Editor de PDF"
+      url: "https://www.ilovepdf.com"
+    - name: "Leis municipais"
+      url: "https://leismunicipais.com.br/legislacao-municipal/1894/leis-de-tapira/"
 
 firefox_extensions:
     - "uBlock0@raymondhill.net"

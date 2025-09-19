@@ -3,6 +3,8 @@
   copy:
     dest: "/etc/xdg/kdeglobals"
     content: |
+      [KDE]
+      widgetStyle=breeze
       [KDE Action Restrictions][$i]
       shell_access=false
       run_command=false
