@@ -4,10 +4,11 @@
             name:
               - krfb
               - printer-driver-escpr
+              - printer-driver-brlaser
               - openssh-server
               - deja-dup
               - vlc
-              - shotwell
+              - digikam
               - gimp
               - inkscape
               - gufw
