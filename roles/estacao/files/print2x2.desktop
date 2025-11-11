@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Service
 X-KDE-ServiceTypes=KonqPopupMenu/Plugin
-MimeType=image/png;image/jpeg;image/jpg;
+MimeType=image/png;image/jpeg;image/jpg;image/webp
 Actions=Print2x2
 
 [Desktop Action Print2x2]
