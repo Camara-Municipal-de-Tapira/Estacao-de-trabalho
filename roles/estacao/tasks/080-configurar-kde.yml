@@ -1,12 +1,9 @@
 ---
-- name: Configura o modo kiosk de forma a travar algumas configurações
+- name: Cria service menu que permite imprimir fotos diretamente do explorador de arquivos
   copy:
-    dest: "/etc/xdg/kdeglobals"
-    content: |
-      [KDE]
-      widgetStyle=breeze
-      [KDE Action Restrictions][$i]
-      shell_access=false
-      run_command=false
-      movable_toolbars=false
+    src: files/print2x2.desktop
+    dest: "/usr/share/kio/servicemenus/imprimir.desktop"
+    owner: root
+    group: root
+    mode: '0755'
   tags: kde

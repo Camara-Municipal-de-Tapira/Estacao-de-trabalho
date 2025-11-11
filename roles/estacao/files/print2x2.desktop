@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/png;image/jpeg;image/jpg;
+Actions=Print2x2
+
+[Desktop Action Print2x2]
+Name=Imprimir fotos (várias por página)
+Icon=printer
+Exec=sh -c 'montage "$@" -tile 2x2 -geometry +10+10 /tmp/print.pdf && okular /tmp/print.pdf' dummy %F

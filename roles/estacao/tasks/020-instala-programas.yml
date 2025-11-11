@@ -19,6 +19,8 @@
               - plymouth-themes
               - thunderbird
               - thunderbird-l10n-pt-br
+              - hyphen-pt-br
+              - mythes-pt-br
             state: present
           tags: instalar
 

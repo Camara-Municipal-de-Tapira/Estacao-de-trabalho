@@ -9,4 +9,6 @@ all:
     juridico:
       hosts:
         cmtapira-inspiron-3647:
-    
+    ti:
+      hosts:
+        desktop-tarcilia: 
