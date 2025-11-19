@@ -22,6 +22,8 @@
               - thunderbird-l10n-pt-br
               - hyphen-pt-br
               - mythes-pt-br
+              - flatpak
+              - plasma-backend-plugin-flatpak
             state: present
           tags: instalar
 
