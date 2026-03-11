@@ -39,3 +39,9 @@
             state: present
           tags: instalar
 
+        - name: "Instala o Onlyoffice"
+          ansible.builtin.apt:
+            deb: https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb
+            state: present
+          tags: instalar
+
